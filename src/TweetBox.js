@@ -8,8 +8,7 @@ class TweetBox extends Component {
 
 		this.state = {
 			charsLeft: 140,
-			tweetList: ["What's up", "No"],
-			username: "jil_slander"
+			tweetList: ["What's up", "No"]
 		}
 	}
 
@@ -46,7 +45,7 @@ class TweetBox extends Component {
 			</form>
 			<br />
 			{this.state.tweetList.map((tweets, idx) => {
-				return <TweetList tweets={tweets} key={idx} username={this.state.username}/>
+				return <TweetList tweets={tweets} key={idx}/>
 			})}
 			</div>
 		)
