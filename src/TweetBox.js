@@ -8,7 +8,7 @@ class TweetBox extends Component {
 
 		this.state = {
 			charsLeft: 140,
-			tweetList: ["this is a test tweet", "this is another test tweet"],
+			tweetList: ["What's up", "No"],
 			username: "jil_slander"
 		}
 	}
@@ -37,13 +37,14 @@ class TweetBox extends Component {
 			<div>
 			<form onSubmit={this.sendTweet}>
 				<label>
-				Post a tweet... <br />
+				Post a tweet... <br /><br />
 					<textarea type="text" maxLength="140" className="input-box" ref={this.textInput} onChange={this.charTicker}/>
 				</label>
 				<br />
-				<div>{this.state.charsLeft}</div>
+				<div className="chars-left">{this.state.charsLeft}</div><br />
 				<button type="submit" value="Submit">Send Tweet </button>
 			</form>
+			<br />
 			{this.state.tweetList.map((tweets, idx) => {
 				return <TweetList tweets={tweets} key={idx} username={this.state.username}/>
 			})}

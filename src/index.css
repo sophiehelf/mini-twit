@@ -20,8 +20,9 @@ body {
 
 .tweet {
 	color: blue;
-	line-height: 0.8;
+	line-height: 1.2;
 	padding-bottom: 8px;
+	display: inline-block;
 }
 
 .footer {
@@ -31,4 +32,8 @@ body {
 	margin-right: auto;
 	left: 0;
 	right: 0;
+}
+
+.chars-left {
+	font-size: 11px;
 }
