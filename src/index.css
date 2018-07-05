@@ -4,6 +4,15 @@ body {
   font-family: sans-serif;
 }
 
+.container {
+	width: 400px;
+	margin: auto;
+}
+
+.header {
+	padding-top: 20px;
+}
+
 .input-box {
 	width: 170px;
 	height: 40px;
@@ -11,12 +20,13 @@ body {
 
 .tweet {
 	color: blue;
+	line-height: 0.8;
+	padding-bottom: 8px;
 }
 
 .footer {
 	position: absolute;
 	bottom: 0px;
-		
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;

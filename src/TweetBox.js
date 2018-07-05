@@ -8,7 +8,7 @@ class TweetBox extends Component {
 
 		this.state = {
 			charsLeft: 140,
-			tweets: ["this is a test tweet", "this is another test tweet"],
+			tweetList: ["this is a test tweet", "this is another test tweet"],
 			username: "jil_slander"
 		}
 	}
@@ -18,14 +18,14 @@ class TweetBox extends Component {
 		console.log(this.textInput.current.value)
 		if (this.textInput.current.value != "") {
 			this.setState({
-				tweets: [this.textInput.current.value, ...this.state.tweets]
+				tweetList: [this.textInput.current.value, ...this.state.tweetList]
 			})
 		} else {
 			return false
 		}
 	}
 
-	charTicker = (e) => {
+	charTicker = () => {
 		this.setState({
 			charsLeft: 140 - this.textInput.current.value.length
 		})
@@ -44,7 +44,7 @@ class TweetBox extends Component {
 				<div>{this.state.charsLeft}</div>
 				<button type="submit" value="Submit">Send Tweet </button>
 			</form>
-			{this.state.tweets.map((tweets, idx) => {
+			{this.state.tweetList.map((tweets, idx) => {
 				return <TweetList tweets={tweets} key={idx} username={this.state.username}/>
 			})}
 			</div>

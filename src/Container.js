@@ -9,10 +9,8 @@ class Container extends Component {
 
 	render() {
 		return(
-			<div>
-			<p>-------------</p>
-			<div>TWITTER DOT COM. I LIVE FOR THIS</div>
-			<p>-------------</p>
+			<div className="container">
+			<div className="header">TWITTER DOT COM. I LIVE FOR THIS</div>
 			<br />
 			<TweetBox />
 			</div>
