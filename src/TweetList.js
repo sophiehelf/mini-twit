@@ -13,7 +13,7 @@ class TweetList extends Component {
 
 	render() {
 		return (
-			<p>Jil Slander: {this.props.tweets}</p>
+			<p className="tweet">Jil Slander: {this.props.tweets}</p>
 		)
 	}
 }
