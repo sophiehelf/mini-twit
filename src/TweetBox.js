@@ -25,6 +25,12 @@ class TweetBox extends Component {
 		}
 	}
 
+	charTicker = (e) => {
+		this.setState({
+			charsLeft: 140 - this.textInput.current.value.length
+		})
+	}
+
 
 	render() {
 		return(
@@ -32,9 +38,10 @@ class TweetBox extends Component {
 			<form onSubmit={this.sendTweet}>
 				<label>
 				Post a tweet... <br />
-					<textarea type="text" maxLength="140" className="input-box" ref={this.textInput}/>
+					<textarea type="text" maxLength="140" className="input-box" ref={this.textInput} onChange={this.charTicker}/>
 				</label>
 				<br />
+				<div>{this.state.charsLeft}</div>
 				<button type="submit" value="Submit">Send Tweet </button>
 			</form>
 			{this.state.tweets.map((tweets, idx) => {
